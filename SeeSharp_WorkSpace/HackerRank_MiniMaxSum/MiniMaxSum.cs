@@ -33,7 +33,7 @@ namespace SeeSharp_WorkSpace.HackerRank_MiniMaxSum
         public long getSum(int[] numbers, int start, int end)
         {
             long sumVaue = 0;
-            int sum = 0;
+            //int sum = 0;
             while(start < end)
             {
                 sumVaue += numbers[start];

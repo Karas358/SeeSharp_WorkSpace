@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="BirthdayCakeTest\TestBirthdayCake.cs" />
     <Compile Include="HackerRank_PlusMinus_Test\Test_PlusMinus.cs" />
+    <Compile Include="HackerRank_TimeConversion_Test\TestTimeConversion.cs" />
     <Compile Include="MiniMaxSumTests\TestMiniMaxSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CountSayTests\TestCountSay.cs" />
@@ -63,9 +64,7 @@
       <Name>SeeSharp_WorkSpace</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="HackerRank_TimeConversion_Test\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

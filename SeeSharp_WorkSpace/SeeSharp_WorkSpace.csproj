@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BirthdayCandle\BirthdayCakeCandle.cs" />
     <Compile Include="CountSay\CountSay.cs" />
+    <Compile Include="DelegationAttempt\DelegateExampleTest.cs" />
     <Compile Include="HackerRank_MiniMaxSum\MiniMaxSum.cs" />
     <Compile Include="HackerRank_PlusMinus\PlusMinus.cs" />
     <Compile Include="HackerRank_TimeConversion\TimeConversion.cs" />
@@ -57,6 +58,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="BirthdayCandle\Instruction.txt" />
+    <Content Include="HackerRank_MiniMaxSum\Instruction.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

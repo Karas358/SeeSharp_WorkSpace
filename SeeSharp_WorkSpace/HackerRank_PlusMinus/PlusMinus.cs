@@ -8,14 +8,19 @@ namespace SeeSharp_WorkSpace.HackerRank_PlusMinus
 {
     public class PlusMinus
     {
-        public void plusMinus(int[] arr)
+        public PlusMinus()
         {
-            if(!isOutOfBounds(arr.Length))
-            {
-                countNumbers(arr);
-            }
+            
         }
-        public void countNumbers(int[] arr)
+        public string getRatioToPrint(List<int> arr)
+        {
+            if (!isOutOfBounds(arr.Count))
+            {
+              return countNumbers(arr);
+            }
+            return string.Empty;
+        }
+        public string countNumbers(List<int> arr)
         {
             double positive = 0;
             double negative = 0;
@@ -34,21 +39,18 @@ namespace SeeSharp_WorkSpace.HackerRank_PlusMinus
                     zero++;
                 }
             }
-            printNumbers(positive, negative, zero, arr.Length);
+            return printNumbers(positive, negative, zero, arr.Count);
         }
 
-        public void printNumbers(double pos, double neg, double z, double arrLen)
+        public string printNumbers(double pos, double neg, double z, double arrLen)
         {
-            decimal poss = (decimal)(pos/arrLen);
-            string zs = string.Format("{0:N6}",poss) + "\n" +
+            return  string.Format("{0:N6}", pos / arrLen) + "\n" +
                         string.Format("{0:N6}", neg / arrLen) + "\n" +
                         string.Format("{0:N6}", z / arrLen);
-            Console.WriteLine(zs);
-            Console.ReadLine();
         }
         public bool isOutOfBounds(int count)
         {
-            return 0 > count || count > 100;
+            return 0 >= count || count > 100;
         }
     }
 }

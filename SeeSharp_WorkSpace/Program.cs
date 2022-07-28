@@ -32,8 +32,10 @@ namespace SeeSharp_WorkSpace
             //TimeConversion timeConverion = new TimeConversion();
             //timeConverion.timeConverter("09:00:00AM");
 
+            //An attempt at delegation
             DelegateExampleTest delegateExample = new DelegateExampleTest();
             delegateExample.myMethodAction(Callback);
+            Console.ReadLine();
 
         }
         public static void Callback(int i)

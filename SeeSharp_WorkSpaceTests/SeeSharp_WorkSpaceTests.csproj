@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="BirthdayCakeTest\TestBirthdayCake.cs" />
     <Compile Include="HackerRank_PlusMinus_Test\Test_PlusMinus.cs" />
+    <Compile Include="HackerRank_Staircase_Test\StaircaseTest.cs" />
+    <Compile Include="HackerRank_StudentGrades_Test\GradeTest.cs" />
     <Compile Include="HackerRank_TimeConversion_Test\TestTimeConversion.cs" />
     <Compile Include="MiniMaxSumTests\TestMiniMaxSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

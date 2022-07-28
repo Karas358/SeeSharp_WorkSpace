@@ -8,59 +8,46 @@ namespace SeeSharp_WorkSpace.HackerRank_TimeConversion
 {
     public class TimeConversion
     {
-        public void timeConverter(string time) {
+        public static string timeConverter(string time) {
             if (!isEmpty(time))
             {
                 if (isValidLength(time))
                 {
-                    Console.WriteLine(getMeridiem(time));
-                    Console.ReadLine();
+                    return getMeridiem(time);
                 }
             }
+            return string.Empty;
         }
-        public bool isValidLength(string time)
+        public static bool isValidLength(string time)
         {
             return time.Length == 10;
         }
 
-        public bool isEmpty(string time)
+        public static bool isEmpty(string time)
         {
             return time.Length <= 0; 
         }
-        public int hourConverter(string hour)
+        public static int hourConverter(string hour)
         {
             return Int32.Parse(hour);
         }
-        public int getHour(string meridiem, string hour)
+        public static string getHour(string meridiem, string hour)
         {
             switch (meridiem)
             {
                 case "AM":
-                    if (hourConverter(hour) > 11)
-                    {
-                        return 0;
-                    }
-                    else
-                    {
-                        return hourConverter(hour);
-                    }
+                    return hourConverter(hour) > 11 ? "00" : (hourConverter(hour) > 9 ? hourConverter(hour).ToString() : string.Format("0{0}", hourConverter(hour)));
                 case "PM":
-                    if (hourConverter(hour) > 11)
-                    {
-                        return 12;
-                    }
-                    else
-                    {
-                        return hourConverter(hour) + 12;
-                    }
+                    return hourConverter(hour) > 11 ? "12" : (hourConverter(hour) + 12).ToString();
             }
-            return 0;
+            return string.Empty;
         }
-        public string getMeridiem(string time)
+        public static string getMeridiem(string time)
         {
             string hour = time.Substring(0, 2);
             string meridiem = time.Substring(8);
-            return getHour(meridiem, hour) + time.Substring(2, 6);
+            //hour = getHour(meridiem, hour).ToString();
+            return string.Format("{0}{1}", getHour(meridiem, hour), time.Substring(2, 6));
         }
     }
 }
